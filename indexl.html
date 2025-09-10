@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>CaseVibes</title>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<header>
+  <div class="header-content">
+    <nav class="menu">
+      <a href="#home" onclick="showSection('home')">Home</a>
+
+      <div class="dropdown">
+        <a href="#catalogo" class="dropbtn" onclick="toggleDropdown(event)">Catalogo ▼</a>
+        <div class="dropdown-content">
+          <a href="#catalogo-iphone" onclick="showCatalog('iphone')">iPhone</a>
+          <a href="#catalogo-samsung" onclick="showCatalog('samsung')">Samsung</a>
+          <a href="#catalogo-Puzzle" onclick="showCatalog('Puzzle')">Puzzle</a>
+          <a href="#catalogo-Blind Box Labubu" onclick="showCatalog('Blind Box Labubu')">Blind Box Labubu</a>
+        </div>
+      </div>
+
+      <a href="#recensioni" onclick="showSection('recensioni')">Recensioni</a>
+      <a href="#serie-a" onclick="showSection('serie-a')">Serie A Tim</a>
+    </nav>
+    <input type="text" id="searchBar" placeholder="Cerca cover..." onkeyup="searchCatalog()" />
+    <img src="images/logo.png" alt="CaseVibes Logo" class="logo" />
+  </div>
+</header>
+
+<main>
+  <!-- BANNER -->
+  <section id="banner" class="banner" onclick="showSection('serie-a')">
+    <img src="images/banner.jpg" alt="Banner Serie A" />
+  </section>
+
+  <!-- HOME -->
+  <section id="home" class="home">
+    <h1>Benvenuto su CaseVibes</h1>
+    <p>Le nostre cover per iPhone, Samsung, Puzzle e Blind Box Labubu sono completamente personalizzabili: scegli il modello e contattaci su whatsapp</p>
+    <div class="home-images">
+      <div class="home-block" onclick="showCatalog('iphone')">
+        <img src="images/iphone.png" alt="Catalogo iPhone" />
+        <h3>Catalogo iPhone</h3>
+      </div>
+      <div class="home-block" onclick="showCatalog('samsung')">
+        <img src="images/samsung.png" alt="Catalogo Samsung" />
+        <h3>Catalogo Samsung </h3>
+      </div>
+      <div class="home-block" onclick="showCatalog('Blind Box Labubu')">
+        <img src="images/tazza.png" alt="Catalogo Blind Box Labubu" />
+        <h3>Catalogo Blind Box Labubu</h3>
+      </div>
+      <div class="home-block" onclick="showCatalog('Puzzle')">
+        <img src="images/Puzzle.png" alt="Catalogo Puzzle" />
+        <h3>Catalogo Puzzle</h3>
+      </div>
+    </div>
+  </section>
+
+  <!-- SEZIONE SERIE A -->
+  <section id="serie-a" class="catalogo" style="display:none;">
+    <h2>Cover Maglie Serie A</h2>
+    <div class="cover-grid" id="serie-a-list">
+      <!-- Inserisci qui le cover Serie A -->
+      <div class="cover">
+        <img src="images/milan.png" alt="Cover iPhone 1" />
+        <h3>Cover iPhone - Milan</h3>
+        <p>Maglia Serie A 2025/26</p>
+        <p class="prezzo">€9,99</p>
+      </div>
+      <div class="cover">
+        <img src="images/Napoli.png" alt="Cover iPhone 2" />
+        <h3>Cover iPhone - Napoli</h3>
+        <p>Maglia Serie A 2025/26</p>
+        <p class="prezzo">€9,99</p>
+      </div>
+      <div class="cover">
+        <img src="images/Juventus.png" alt="Cover iPhone 3" />
+        <h3>Cover iPhone - Juventus</h3>
+        <p>Maglia Serie A 2025/26</p>
+        <p class="prezzo">€9,99</p>
+      </div>
+      <div class="cover">
+        <img src="images/como.png" alt="Cover iPhone 8" />
+        <h3>Cover iPhone - Como</h3>
+        <p>Maglia Serie A 2025/26</p>
+        <p class="prezzo">€9,99</p>
+      </div>
+      <div class="cover">
+        <img src="images/Inter.jpg" alt="Cover iPhone 9" />
+        <h3>Cover iPhone - Inter</h3>
+        <p>Maglia Serie A 2025/26</p>
+        <p class="prezzo">€9,99</p>
+      </div>
+      <div class="cover">
+        <img src="images/lazio.png" alt="Cover iPhone 10" />
+        <h3>Cover iPhone - Lazio</h3>
+        <p>Maglia Serie A 2025/26</p>
+        <p class="prezzo">€9,99</p>
+      </div>
+      <div class="cover">
+        <img src="images/Roma.png" alt="Cover iPhone 11" />
+        <h3>Cover iPhone - Roma</h3>
+        <p>Maglia Serie A 2025/26</p>
+        <p class="prezzo">€9,99</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CATALOGO IPHONE -->
+  <section id="catalogo-iphone" class="catalogo" style="display:none;">
+    <h2>Catalogo iPhone</h2>
+    <div class="cover-grid" id="iphone-list">
+      <!-- Cover iPhone esempio -->
+      <div class="cover">
+        <img src="images/milan.png" alt="Cover iPhone 1" />
+        <h3>Cover iPhone - Milan</h3>
+        <p>Maglia Serie A 2025/26</p>
+        <p class="prezzo">€9,99</p>
+      </div>
+                        <div class="cover">
+        <img src="images/mctominay6.png" alt="Cover iPhone 1" />
+        <h3>Cover iPhone - Scott McTominay</h3>
+        <p>Scott McTominay Cover</p>
+        <p class="prezzo">€9,99</p>
+      </div>
+                              <div class="cover">
+        <img src="images/zhegrova.png" alt="Cover iPhone 1" />
+        <h3>Cover iPhone - Edon Zhegrova</h3>
+        <p>Edon Zhegrova Cover</p>
+        <p class="prezzo">€9,99</p>
+      </div>
+                                    <div class="cover">
+        <img src="images/insuperabile.png" alt="Cover iPhone 1" />
+        <h3>Cover iPhone - Insuperabile</h3>
+        <p>Insuperabile Cover</p>
+        <p class="prezzo">€9,99</p>
+      </div>
+               <div class="cover">
+        <img src="images/lautarotoroanteprima.png" alt="Cover iPhone 1" />
+        <h3>Cover iPhone - Lautaro</h3>
+        <p>Lautaro Cover</p>
+        <p class="prezzo">€9,99</p>
+      </div>
+                  <div class="cover">
+        <img src="images/Lautaromartinez.png" alt="Cover iPhone 1" />
+        <h3>Cover iPhone - Lautaro</h3>
+        <p>Lautaro Cover</p>
+        <p class="prezzo">€9,99</p>
+      </div>
+                 <div class="cover">
+        <img src="images/34.png" alt="Cover iPhone 1" />
+        <h3>Cover iPhone - Lautaro</h3>
+        <p>Lautaro Cover</p>
+        <p class="prezzo">€9,99</p>
+      </div>
+                        <div class="cover">
+        <img src="images/angui.png" alt="Cover iPhone 1" />
+        <h3>Cover iPhone - Zambo Anguissa</h3>
+        <p>Zambo Anguissa Cover</p>
+        <p class="prezzo">€9,99</p>
+      </div>
+                              <div class="cover">
+        <img src="images/kdb2.png" alt="Cover iPhone 1" />
+        <h3>Cover iPhone - Kevin De Bruyne</h3>
+        <p>Kevin De Bruyne Cover</p>
+        <p class="prezzo">€9,99</p>
+      </div>
+                                    <div class="cover">
+        <img src="images/Kdb1.png" alt="Cover iPhone 1" />
+        <h3>Cover iPhone - Kevin De Bruyne</h3>
+        <p>Kevin De Bruyne Cover</p>
+        <p class="prezzo">€9,99</p>
+      </div>
+                        <div class="cover">
+        <img src="images/mctominay5.png" alt="Cover iPhone 1" />
+        <h3>Cover iPhone - Scott McTominay</h3>
+        <p>Scott McTominay Cover</p>
+        <p class="prezzo">€9,99</p>
+      </div>
+            <div class="cover">
+        <img src="images/rafaleao.png" alt="Cover iPhone 1" />
+        <h3>Cover iPhone - Rafael Leão</h3>
+        <p>Rafael Leão Cover</p>
+        <p class="prezzo">€9,99</p>
+      </div>
+                  <div class="cover">
+        <img src="images/mctominay.png" alt="Cover iPhone 1" />
+        <h3>Cover iPhone - Scott McTominay</h3>
+        <p>Scott McTominay Cover</p>
+        <p class="prezzo">€9,99</p>
+      </div>
+                        <div class="cover">
+        <img src="images/mctominay2.png" alt="Cover iPhone 1" />
+        <h3>Cover iPhone - Scott McTominay</h3>
+        <p>Scott McTominay Cover</p>
+        <p class="prezzo">€9,99</p>
+      </div>
+                        <div class="cover">
+        <img src="images/mctominay3.png" alt="Cover iPhone 1" />
+        <h3>Cover iPhone - Scott McTominay</h3>
+        <p>Scott McTominay Cover</p>
+        <p class="prezzo">€9,99</p>
+      </div>
+                        <div class="cover">
+        <img src="images/mctominay4.png" alt="Cover iPhone 1" />
+        <h3>Cover iPhone - Scott McTominay</h3>
+        <p>Scott McTominay Cover</p>
+        <p class="prezzo">€9,99</p>
+      </div>
+                        <div class="cover">
+        <img src="images/debryuneemctominay.png" alt="Cover iPhone 1" />
+        <h3>Cover iPhone - Debryune x mctominay</h3>
+        <p>Debryune x Scott McTominay Cover</p>
+        <p class="prezzo">€9,99</p>
+      </div>
+                  <div class="cover">
+        <img src="images/rafaleao2.png" alt="Cover iPhone 1" />
+        <h3>Cover iPhone - Rafael Leão</h3>
+        <p>Rafael Leão Cover</p>
+        <p class="prezzo">€9,99</p>
+      </div>
+            <div class="cover">
+        <img src="images/openda.png" alt="Cover iPhone 1" />
+        <h3>Cover iPhone - Openda</h3>
+        <p>Openda Juventus</p>
+        <p class="prezzo">€9,99</p>
+      </div>
+      <div class="cover">
+        <img src="images/Napoli.png" alt="Cover iPhone 2" />
+        <h3>Cover iPhone - Napoli</h3>
+        <p>Maglia Serie A 2025/26</p>
+        <p class="prezzo">€9,99</p>
+      </div>
+      <div class="cover">
+        <img src="images/Juventus.png" alt="Cover iPhone 3" />
+        <h3>Cover iPhone - Juventus</h3>
+        <p>Maglia Serie A 2025/26</p>
+        <p class="prezzo">€9,99</p>
+      </div>
+      <div class="cover">
+        <img src="images/como.png" alt="Cover iPhone 4" />
+        <h3>Cover iPhone - Como</h3>
+        <p>Maglia Serie A 2025/26</p>
+        <p class="prezzo">€9,99</p>
+      </div>
+      <div class="cover">
+        <img src="images/Inter.jpg" alt="Cover iPhone 5" />
+        <h3>Cover iPhone - Inter</h3>
+        <p>Maglia Serie A 2025/26</p>
+        <p class="prezzo">€9,99</p>
+      </div>
+      <div class="cover">
+        <img src="images/lazio.png" alt="Cover iPhone 6" />
+        <h3>Cover iPhone - Lazio</h3>
+        <p>Maglia Serie A 2025/26</p>
+        <p class="prezzo">€9,99</p>
+      </div>
+      <div class="cover">
+        <img src="images/Roma.png" alt="Cover iPhone 8" />
+        <h3>Cover iPhone - Roma</h3>
+        <p>Maglia Serie A 2025/26</p>
+        <p class="prezzo">€9,99</p>
+      </div>
+      <div class="cover">
+        <img src="images/cr7.png" alt="Cover iPhone 9" />
+        <h3>Cover iPhone - Ronaldo</h3>
+        <p>Cover iPhone - Ronaldo</p>
+        <p class="prezzo">€9,99</p>
+      </div>
+                  <div class="cover">
+        <img src="images/2.png" alt="Cover iPhone 10" />
+        <h3>Cover iPhone - Ronaldo Viola</h3>
+        <p>Cover iPhone - Ronaldo</p>
+        <p class="prezzo">€9,99</p>
+      </div>
+            <div class="cover">
+        <img src="images/3.png" alt="Cover iPhone 11" />
+        <h3>Cover iPhone - Ronaldo Sium</h3>
+        <p>Cover iPhone - Ronaldo </p>
+        <p class="prezzo">€9,99</p>
+      </div>
+            <div class="cover">
+        <img src="images/4.png" alt="Cover iPhone 12" />
+        <h3>Cover iPhone - Ronaldo Rovesciata</h3>
+        <p>Cover iPhone - Ronaldo</p>
+        <p class="prezzo">€9,99</p>
+      </div>
+                  <div class="cover">
+        <img src="images/dinho.png" alt="Cover iPhone 113" />
+        <h3>Cover iPhone - Ronaldinho </h3>
+        <p>Cover iPhone - Ronaldinho</p>
+        <p class="prezzo">€9,99</p>
+      </div>
+                        <div class="cover">
+        <img src="images/dinhooo.png" alt="Cover iPhone 14" />
+        <h3>Cover iPhone - Ronaldinho </h3>
+        <p>Cover iPhone - Ronaldinho</p>
+        <p class="prezzo">€9,99</p>
+      </div>
+                 <div class="cover">
+        <img src="images/mESSI.png" alt="Cover iPhone 14" />
+        <h3>Cover iPhone - Messi</h3>
+        <p>Cover iPhone - Messi</p>
+        <p class="prezzo">€9,99</p>
+      </div>
+                       <div class="cover">
+        <img src="images/anteprimeiphone.png" alt="Cover iPhone 14" />
+        <h3>Cover iPhone - MoiseKean</h3>
+        <p>Cover iPhone - MoiseKean</p>
+        <p class="prezzo">€9,99</p>
+      </div>
+                             <div class="cover">
+        <img src="images/njj.png" alt="Cover iPhone 14" />
+        <h3>Cover iPhone - Neymar</h3>
+        <p>Cover iPhone - Neymar</p>
+        <p class="prezzo">€9,99</p>
+      </div>
+                             <div class="cover">
+        <img src="images/nj.png" alt="Cover iPhone 14" />
+        <h3>Cover iPhone - Neymar</h3>
+        <p>Cover iPhone - Neymar</p>
+        <p class="prezzo">€9,99</p>
+      </div>
+  </section>
+
+  <!-- CATALOGO SAMSUNG -->
+  <section id="catalogo-samsung" class="catalogo" style="display:none;">
+    <h2>Catalogo Samsung</h2>
+    <div class="cover-grid" id="samsung-list">
+      <!-- Cover Samsung esempio -->
+      <div class="cover">
+        <img src="images/comosamsung.png" alt="Cover Samsung 1" />
+        <h3>Cover Samsung - Como</h3>
+        <p>Maglia Serie A 2025/26</p>
+        <p class="prezzo">€9,99</p>
+      </div>
+      <div class="cover">
+        <img src="images/romasamsung.png" alt="Cover Samsung 2" />
+        <h3>Cover Samsung - Roma </h3>
+        <p>Maglia Serie A 2025/26</p>
+        <p class="prezzo">€9,99</p>
+      </div>
+      <div class="cover">
+        <img src="images/samsunglazio.png" alt="Cover Samsung 3" />
+        <h3>Cover Samsung - Lazio </h3>
+        <p>Maglia Serie A 2025/26</p>
+        <p class="prezzo">€9,99</p>
+      </div>
+      <div class="cover">
+        <img src="images/samsungNapoli.png" alt="Cover Samsung 4" />
+        <h3>Cover Samsung - Napoli </h3>
+        <p>Maglia Serie A 2025/26</p>
+        <p class="prezzo">€9,99</p>
+      </div>
+      <div class="cover">
+        <img src="images/intersamsung.png" alt="Cover Samsung 5" />
+        <h3>Cover Samsung - Inter</h3>
+        <p>Maglia Serie A 2025/26</p>
+        <p class="prezzo">€9,99</p>
+      </div> 
+      <div class="cover">
+        <img src="images/juventussamsung.png" alt="Cover Samsung 1" />
+        <h3>Cover Samsung - Juventus </h3>
+        <p>Maglia Serie A 2025/26</p>
+        <p class="prezzo">€9,99</p>
+      </div> 
+      <div class="cover">
+        <img src="images/milansamsung.png" alt="Cover Samsung 1" />
+        <h3>Cover Samsung - Milan </h3>
+        <p>Maglia Serie A 2025/26</p>
+        <p class="prezzo">€9,99</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CATALOGO Puzzle -->
+  <section id="catalogo-Puzzle" class="catalogo" style="display:none;">
+    <h2>Catalogo Puzzle</h2>
+    <div class="cover-grid" id="Puzzle-list">
+      <!-- Inserisci qui le Puzzle personalizzate -->
+      <p>Qui saranno mostrate le Puzzle personalizzate. Aggiungi le immagini e descrizioni come negli altri cataloghi.</p>
+    </div>
+  </section>
+
+    <!-- CATALOGO Labubu -->
+  <section id="catalogo-Blind Box Labubu" class="catalogo" style="display:none;">
+    <h2>Catalogo Labubu</h2>
+    <div class="cover-grid" id="labubu-list">
+      <!-- Cover Labubu esempio -->
+      <div class="cover">
+        <img src="images/Bigintoenergy.webp" alt="Labubu Bigintoenergy" />
+        <h3>Cover Labubu - Bigintoenergy</h3>
+        <p>Blind Box Labubu</p>
+        <p class="prezzo">€9,99</p>
+      </div>
+      <div class="cover">
+        <img src="images/lovely.webp" alt="Cover Labubu - Lovely" />
+        <h3>Cover Labubu - Lovely</h3>
+        <p>Blind Box Labubu</p>
+        <p class="prezzo">€9,99</p>
+      </div>
+      <div class="cover">
+        <img src="images/Macaron.png" alt="Cover Labubu - Macaron" />
+        <h3>Cover Labubu - Macaron</h3>
+        <p>Blind Box Labubu</p>
+        <p class="prezzo">€9,99</p>
+      </div>
+      <div class="cover">
+        <img src="images/cocacola.png" alt="Cover Labubu - Coca Cola" />
+        <h3>Cover Labubu - Coca Cola</h3>
+        <p>Blind Box Labubu</p>
+        <p class="prezzo">€9,99</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- RECENSIONI -->
+  <section id="recensioni" class="recensioni" style="display:none;">
+    <h2>Recensioni</h2>
+    <p>Qui puoi inserire le recensioni dei clienti.</p>
+  </section>
+</main>
+
+<script>
+  document.querySelectorAll('.cover').forEach(cover => {
+    cover.addEventListener('click', () => {
+      // Se c'è già un bottone di ordine in questa cover, lo togliamo (toggle)
+      const existingBtn = cover.querySelector('.order-btn');
+      if (existingBtn) {
+        existingBtn.remove();
+        return;
+      }
+
+      // Rimuoviamo tutti gli altri bottoni attivi su altre cover
+      document.querySelectorAll('.order-btn').forEach(btn => btn.remove());
+
+      // Prendiamo il nome della cover (dal titolo h3)
+      const coverName = cover.querySelector('h3').textContent.trim();
+
+      // Creiamo il bottone
+      const orderBtn = document.createElement('a');
+      orderBtn.classList.add('order-btn');
+      orderBtn.textContent = 'Ordina su WhatsApp';
+
+      // Messaggio precompilato, url encoded
+      const message = encodeURIComponent(`Ciao! Vorrei ordinare la cover: "${coverName}".`);
+
+      // Numero WhatsApp di destinazione (modifica con il tuo)
+      const whatsappNumber = '393508509772';
+
+      orderBtn.href = `https://wa.me/${whatsappNumber}?text=${message}`;
+      orderBtn.target = '_blank';
+      orderBtn.rel = 'noopener noreferrer';
+
+      // Inseriamo il bottone dentro la cover
+      cover.appendChild(orderBtn);
+    });
+  });
+
+  // Funzione per mostrare la sezione principale
+  function showSection(sectionId) {
+    const sections = ['home', 'serie-a', 'catalogo-iphone', 'catalogo-samsung', 'catalogo-Puzzle', 'catalogo-Blind Box Labubu', 'recensioni'];
+    sections.forEach(id => {
+      document.getElementById(id).style.display = (id === sectionId) ? 'block' : 'none';
+    });
+    closeDropdown();
+  }
+
+  // Funzione per mostrare cataloghi specifici da dropdown o homepage
+  function showCatalog(type) {
+    // Nascondo tutte le sezioni
+    showSection(''); // nasconde tutte
+    // Mostro la sezione giusta
+    if (type === 'iphone') {
+      document.getElementById('catalogo-iphone').style.display = 'block';
+    } else if (type === 'samsung') {
+      document.getElementById('catalogo-samsung').style.display = 'block';
+    } else if (type === 'Puzzle') {
+      document.getElementById('catalogo-Puzzle').style.display = 'block';
+    } else if (type === 'Blind Box Labubu') {
+      document.getElementById('catalogo-Blind Box Labubu').style.display = 'block';
+    }
+    closeDropdown();
+  }
+
+  // Funzione per chiudere tutte le sezioni
+  function showSection(empty) {
+    if(empty === '') {
+      const sections = ['home', 'serie-a', 'catalogo-iphone', 'catalogo-samsung', 'catalogo-Puzzle', 'catalogo-Blind Box Labubu', 'recensioni'];
+      sections.forEach(id => {
+        document.getElementById(id).style.display = 'none';
+      });
+    } else {
+      const sections = ['home', 'serie-a', 'catalogo-iphone', 'catalogo-samsung', 'catalogo-Puzzle', 'catalogo-Blind Box Labubu', 'recensioni'];
+      sections.forEach(id => {
+        document.getElementById(id).style.display = (id === empty) ? 'block' : 'none';
+      });
+    }
+  }
+
+  // Toggle dropdown menu
+  function toggleDropdown(event) {
+    event.preventDefault();
+    const dropdownContent = event.target.nextElementSibling;
+    if (dropdownContent.style.display === 'block') {
+      dropdownContent.style.display = 'none';
+    } else {
+      dropdownContent.style.display = 'block';
+    }
+  }
+
+  // Chiudi dropdown
+  function closeDropdown() {
+    const dropdowns = document.querySelectorAll('.dropdown-content');
+    dropdowns.forEach(drop => {
+      drop.style.display = 'none';
+    });
+  }
+
+  
+  // Ricerca catalogo (da implementare secondo contenuto)
+  function searchCatalog() {
+    const input = document.getElementById('searchBar').value.toLowerCase();
+    const catalogs = ['catalogo-iphone', 'catalogo-samsung', 'catalogo-Puzzle', 'catalogo-Blind Box Labubu', 'serie-a'];
+    catalogs.forEach(catalogId => {
+      const catalog = document.getElementById(catalogId);
+      if (catalog) {
+        const covers = catalog.querySelectorAll('.cover');
+        covers.forEach(cover => {
+          const title = cover.querySelector('h3').textContent.toLowerCase();
+          cover.style.display = title.includes(input) ? 'block' : 'none';
+        });
+      }
+    });
+  }
+
+  // All'avvio mostra la home
+  document.addEventListener('DOMContentLoaded', () => {
+    showSection('home');
+  });
+</script>
+
+</body>
+</html>
